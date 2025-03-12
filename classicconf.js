@@ -43,6 +43,7 @@ global.wlcm = []
 global.wlcmm = []
 global.anticall = true
 global.rn = 'false'
+global.readMessages = process.env.readMessages || "TRUE"
 /*
 Declaring Menu type
 
