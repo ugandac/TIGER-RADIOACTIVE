@@ -227,7 +227,7 @@ classic.ev.on("messages.upsert", async (chatUpdate) => {
     try {
     mek = chatUpdate.messages[0];
       if (autoviewstatus === 'TRUE' && mek.key && mek.key.remoteJid === "status@broadcast") {
-      if (autolike && mek.key.remoteJid === "status@broadcast") {
+      
             
       classic.readMessages([mek.key]);
 
