@@ -58,7 +58,7 @@ if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!
 if (global.db.data !== null) return
 global.db.READ = true
 await global.db.read()
-global.db.READ = false
+global.db.READ = true
 global.db.data = {
 users: {},
 chats: {},
@@ -180,7 +180,7 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await classic.getName(i + '@s.whatsapp.net
 classic.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })}
 //=================================================//
 //Kalau Mau Self Lu Buat Jadi false
-classic.public = true
+classic.public = false
 //=================================================//
 //=================================================//
 classic.ev.on('creds.update', saveCreds)
